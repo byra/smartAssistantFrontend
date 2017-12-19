@@ -1,5 +1,6 @@
 .Title {
     background-color: #005A74;
+    width: 100%;
 }
 
 .Title-logo {
@@ -30,4 +31,5 @@
     padding-top: 20px;
     float: right;
     color: #005A74;
+
 }

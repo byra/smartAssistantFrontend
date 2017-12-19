@@ -1,10 +1,58 @@
 .Bot{
-    float:right;
 
 }
 
 .Bot-icon{
-    padding-bottom: 10px;
-    padding-right: 5px;
-    height: 60px;
+    position: fixed;
+    z-index: 16777271;
+    height: 2.5em;
+    width: 2.5em;
+    color: #005A74;
+    bottom: 45%;
+    right: 1%;
+}
+
+.table-space{
+    position: fixed;
+    z-index: 16777271;
+    color: #f9f895;
+    bottom: 0;
+    right: 1%;
+    width: 25%;
+    height: 50%;
+    border: 2px solid #005A74;
+
+}
+
+.table-header{
+    background-color: #005A74;
+    height: 9%;
+}
+
+.header-name{
+    padding-top: 1%;
+    padding-left: 2%;
+    float: left;
+}
+
+.header-close{
+    padding-top: 1%;
+    padding-right: 2%;
+    float: right;
+}
+
+.table-footer{
+    background-color: #005A74;
+    height: 1.5%;
+}
+
+.chat-input{
+    position: fixed;
+    bottom: 1%;
+    width: 24.5%;
+    border-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
 }
