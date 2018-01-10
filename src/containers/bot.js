@@ -8,6 +8,7 @@ import {chatOpenAction} from "../actions/chatOpenAction";
 
 
 class Bot extends Component {
+
     render() {
         if (this.props.isChatOpen) {
             return <ChatArea/>;
@@ -21,19 +22,17 @@ class Bot extends Component {
 
 const mapStateToProps = state => {
     return {
-        isChatOpen: state.chatOpen
-    }
+        isChatOpen: state.chatOpenReducer.chatOpen,
+    };
 };
 
 
 const mapDispatchToProps = dispatch => {
     return {
         openChatArea: () => dispatch(chatOpenAction())
-    }
+    };
 };
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Bot);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Bot);
 

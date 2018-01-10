@@ -3,3 +3,9 @@ export const chatOpenAction = ()=> {
         type:'openChatArea'
     };
 };
+
+export const botMinimizeAction = () => {
+    return{
+        type:'closeChatArea'
+    };
+};
