@@ -46,6 +46,18 @@
     height: 1.5%;
 }
 
+.table-body{
+    overflow-y: auto;
+    color: black;
+}
+
+.request{
+    float: right;
+}
+
+.respone{
+    float: left;
+}
 .chat-input{
     position: fixed;
     bottom: 1%;
@@ -56,3 +68,4 @@
     font-size: 1rem;
     line-height: 1.25;
 }
+

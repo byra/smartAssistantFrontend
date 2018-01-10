@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Title from './title';
-import Bot from './bot'
+import React from 'react'
+import {Title} from './title';
+import Bot from '../containers/bot'
 import './../styles/title.css';
 
-class Layout extends Component {
-  render() {
+
+export const Layout = ()=>{
     return (
           <div className="">
                 <div className="row">
@@ -15,8 +15,5 @@ class Layout extends Component {
                 </div>
           </div>
     );
-  }
-}
+};
 
-
-export default Layout;
