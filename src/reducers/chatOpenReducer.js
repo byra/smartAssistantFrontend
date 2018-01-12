@@ -1,7 +1,4 @@
-import {initialState} from '../initialState';
-
-
-export const chatOpenReducer = (state = initialState, action)=>{
+export const chatOpenReducer = (state = {}, action)=>{
     switch(action.type){
         case 'openChatArea':
             return Object.assign({}, state, {chatOpen:true});

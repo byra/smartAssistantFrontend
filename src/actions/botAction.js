@@ -9,7 +9,6 @@ export const botAction = (request) => {
     return{
         type:'requestCall',
         id:chatId++,
-        client:client,
-        request:request
+        dialogResponse: client.textRequest(request)
     };
 };

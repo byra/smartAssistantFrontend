@@ -4,76 +4,61 @@ import {connect} from 'react-redux'
 import MdMin from 'react-icons/lib/md/remove';
 import {botAction} from '../actions/botAction';
 import {botMinimizeAction} from '../actions/chatOpenAction'
+import {Messages} from "../components/messages";
+import "../styles/bot.css";
 
 
 class ChatArea extends Component {
+    constructor(props) {
+        super(props)
 
+    }
 
     render() {
-        let request;
-
-        let ChatMessages = ()=>{
-            if(Object.keys(this.props.responses).length === 0){
-                return null;
-            }
-            else{
-                let  messages='';
-                for(let response of this.props.responses){
-                    console.log(Promise.resolve(response.responsesPromise));
-                    messages += response.request + response.responsesPromise.result;
-                }
-                return(messages);
-
-            }
-        };
-
+        let request = '';
         return (
-            <table className="table-space ">
-                <thead>
-                <tr>
-                    <th className='table-header'>
-                        <div className='header-name'>
-                            Tina
-                        </div>
-                        <div className='header-close' onClick={() => this.props.minimizeChatArea()}>
-                            <MdMin/>
-                        </div>
-                    </th>
-                </tr>
-                </thead>
-                <tbody className='table-body' id='chat-table'>
-                <ChatMessages/>
-                <tr>
-                    <td>
-                        <input className="chat-input"
-                               ref={node => {
+            <div className="bot">
+                <div className='headerData'>
+                    <div className='headerName'>
+                        Tina
+                    </div>
+                    <div className='headerClose' onClick={() => this.props.minimizeChatArea()}>
+                        <MdMin/>
+                    </div>
+                </div>
+
+                <div className='body'>
+                    <div id='bodyMessages'>
+                        <Messages responsePromise={this.props.responses}/>
+                        {/*Messages will be loaded here*/}
+                    </div>
+                </div>
+
+                <div className='footer'>
+                    <input className="footerChatInput"
+                           ref={
+                               node => {
                                    request = node
                                }
-                               }
-                               placeholder="Say Hi!!!"
-                               onKeyPress={(event) => {
-                                   if (event.key === 'Enter') {
+                           }
+                           placeholder="Say Hi!!!"
+                           onKeyPress={
+                               (event) => {
+                                   if (event.key === 'Enter' && request.value.trim() !== '') {
                                        this.props.fetchResponse(request.value.trim());
                                        request.value = '';
                                    }
                                }
-                               }
-                        />
-                    </td>
-                </tr>
-                </tbody>
-                <tfoot className='table-footer'>
-
-                </tfoot>
-            </table>
-
+                           }
+                    />
+                </div>
+            </div>
         )
     }
 }
 
 
 const mapStateToProps = state => {
-    console.log(Object.keys(state.botReducer).length);
     return {
         responses: state.botReducer
 
