@@ -36,5 +36,5 @@ const display = messages =>{
         htmlMessages += '</div>';
     }
     node.innerHTML = htmlMessages;
-    node.scrollTop = node.scrollHeight;
+
 };

@@ -1,5 +1,5 @@
 
-export const botReducer = (state={}, action) => {
+export const botReducer = (state=[], action) => {
     switch(action.type){
         case 'requestCall':
             return [

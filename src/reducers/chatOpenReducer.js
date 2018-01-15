@@ -1,4 +1,4 @@
-export const chatOpenReducer = (state = {}, action)=>{
+export const chatOpenReducer = (state = {chatOpen: false}, action)=>{
     switch(action.type){
         case 'openChatArea':
             return Object.assign({}, state, {chatOpen:true});
