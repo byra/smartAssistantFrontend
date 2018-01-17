@@ -17,7 +17,6 @@
     height: 50%;
     bottom: 0;
 
-
 }
 
 .headerData{
@@ -40,34 +39,57 @@
 }
 
 .body{
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 81%;
     border: .2rem solid #005A74;
+    background-color: white;
 }
 
-#bodyMessages{
-    color: black;
+
+.requestDiv{
+
 }
 
 .requestMessage{
-    margin: .5em;
+    margin-right: .5em;
     float: right;
     background-color: #DEEAF2;
     border-radius: .3em;
+    padding: 0 .5em 0 .5em;
+    max-width: 87%;
+}
+
+.responseDiv{
+
 }
 
 .receivedMessage{
-    margin: .5em;
+    margin-left: .5em;
     float: left;
     background-color: #DEEAF2;
     border-radius: .3em;
-    z-index: 5;
+    padding: 0 .5em 0 .5em;
+    max-width: 87%;
+}
+
+.messageHeader{
+    color: black;
 }
 
 .messageData{
-    padding: .5em;
+    color: black;
+}
+
+.timeDiv{
 
 }
+
+.requestTime{
+    color: #999999;
+    font-size: small;
+    text-align: center;
+}
+
 
 .footerChatInput{
     bottom: .25%;

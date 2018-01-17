@@ -1,10 +1,13 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Layout} from './layout';
+import {Layout} from './Layout';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
-const Root = (store) => (
+const Root = ({store}) => (
     <Provider store={store}>
-        <Layout/>
+        <Router>
+            <Route path = "/" component = {Layout}/>
+        </Router>
     </Provider>
 );
 

@@ -7,13 +7,16 @@ import {loadState, saveState} from "./localStorage";
 import throttle from 'lodash/throttle';
 
 const configureStore = () =>{
-    const persistentState = loadState();
+    //const persistentState = loadState();
+    const persistentState = {};
     const middleware = applyMiddleware(logger, thunk, promise());
     const store = createStore(reducer, persistentState, middleware);
 
     store.subscribe(throttle(() =>{
         saveState({
-            chatOpenReducer : store.getState().chatOpenReducer
+            chatOpenReducer : store.getState().chatOpenReducer,
+            botReducer: store.getState().botReducer
+
         });
     }, 1000));
 

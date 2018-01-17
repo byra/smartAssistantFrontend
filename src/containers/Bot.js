@@ -1,9 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 import '../styles/bot.css';
-import ChatArea from './chatArea'
+import ChatArea from './ChatArea'
 import {connect} from 'react-redux';
-import {ChatButton} from '../components/chatButton'
+import {ChatButton} from '../components/ChatButton'
 import {chatOpenAction} from "../actions/chatOpenAction";
 
 

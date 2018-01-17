@@ -5,7 +5,10 @@ export const botReducer = (state=[], action) => {
             return [
                 ...state,
                 {   id:action.id,
-                    responsePromise:action.dialogResponse
+                    send:action.send,
+                    result:action.result,
+                    timestamp:action.timestamp,
+                    action:action.action,
                 }
 
             ];
