@@ -7,8 +7,8 @@ import {loadState, saveState} from "./localStorage";
 import throttle from 'lodash/throttle';
 
 const configureStore = () =>{
-    const persistentState = loadState();
-    //const persistentState = {};
+    //const persistentState = loadState();
+    const persistentState = {};
     const middleware = applyMiddleware(logger, thunk, promise());
     const store = createStore(reducer, persistentState, middleware);
 
