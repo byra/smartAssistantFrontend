@@ -16,17 +16,13 @@ class ChatArea extends Component {
 
     componentDidMount(){
         if(document.getElementById("chatBody")!=null){
-            let elementBody =  document.getElementById("chatBody");
-            let elementChild =  document.getElementById("chatChild");
-            elementBody.scrollBy(0,elementChild.clientHeight + elementBody.clientHeight);
+            scrollDown();
         }
 
     }
 
     componentDidUpdate(){
-        let elementBody =  document.getElementById("chatBody");
-        let elementChild =  document.getElementById("chatChild");
-        elementBody.scrollBy(0,elementChild.clientHeight + elementBody.clientHeight );
+        scrollDown();
     };
 
 
@@ -94,3 +90,10 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(ChatArea);
+
+
+const scrollDown = ()=>{
+    let elementBody =  document.getElementById("chatBody");
+    let elementChild =  document.getElementById("chatChild");
+    elementBody.scrollBy(0,elementChild.clientHeight + elementBody.clientHeight );
+};
