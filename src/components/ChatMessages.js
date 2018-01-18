@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/bot.css";
 
 export const ChatMessages = ({responses}) => (
-    <div id = "chatBody">
+    <div id="chatChild">
         {responses.map(response => (
             <Messages key={response.id} {...response}/>
         ))
@@ -43,7 +43,6 @@ const Messages = ({send, result, timestamp}) => (
             </p>
         </div>
         <br/>
-
     </div>
 
 );

@@ -17,6 +17,11 @@ const receivedData = (response)=>{
     let date = new Date(timestamp);
     let hours = (date.getHours()<10?'0':'') + date.getHours();
     let minutes = (date.getMinutes()<10?'0':'') + date.getMinutes();
+    let action = response.result.action;
+    let actionChange = false;
+    if (action !== '' && action !== 'input.unknown' && action.search("smalltalk.") !== 0){
+        actionChange = true;
+    }
     return{
         type: 'requestCall',
         id:v4(),
@@ -24,5 +29,6 @@ const receivedData = (response)=>{
         result: response.result.fulfillment.speech,
         timestamp:hours +":"+minutes,
         action:response.result.action,
+        actionChange:actionChange
     }
 };

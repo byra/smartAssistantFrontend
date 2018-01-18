@@ -9,6 +9,7 @@ export const botReducer = (state=[], action) => {
                     result:action.result,
                     timestamp:action.timestamp,
                     action:action.action,
+                    actionChange:action.actionChange
                 }
 
             ];

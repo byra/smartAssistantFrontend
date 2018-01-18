@@ -11,7 +11,6 @@
 .bot{
     position: fixed;
     z-index: 16777271;
-    color: #f9f895;
     right: .25%;
     width: 22%;
     height: 50%;
@@ -20,6 +19,7 @@
 }
 
 .headerData{
+    color: #f9f895;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25em;
     background-color: #005A74;
@@ -81,6 +81,7 @@
 }
 
 .timeDiv{
+    padding: 0 50% 0 50%;
 
 }
 

@@ -1,4 +1,9 @@
-#dataArea{
-    width: 98%;
-    padding: 1em;
+.dataArea{
+    overflow: scroll;
+    width: 95%;
+    margin-top: 2%;
+    margin-left: 1em;
+    z-index: 8388635;
+    /*background-color: #DEEAF2;*/
+    border-radius: .3em;
 }
