@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+#other files to be ignored
+.idea/
+package-lock.json
