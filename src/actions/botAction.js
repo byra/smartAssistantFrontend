@@ -29,6 +29,7 @@ const receivedData = (response)=>{
         result: response.result.fulfillment.speech,
         timestamp:hours +":"+minutes,
         action:response.result.action,
-        actionChange:actionChange
+        actionChange:actionChange,
+        parameters:response.result.parameters
     }
 };

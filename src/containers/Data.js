@@ -18,7 +18,7 @@ class Data extends Component {
         let len = responseArray.length - 1;
         if (responseArray[len].action !== "clear_screen") {
             if (responseArray[len].actionChange) {
-                fetch("http://34.209.27.55:3030/" + responseArray[len].action)
+                fetch("http://54.149.198.130:3030/" + responseArray[len].action+"?parameters="+ JSON.stringify(responseArray[len].parameters))
                     .then(res => {
                         if (res.status >= 400) {
                             throw new Error("Bad response from server");
